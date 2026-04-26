@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TU CASA CARTAGENA | FICHA DE CAPTACION</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="imagenes/Favicon prueba 1.svg">
+</head>
+<body>
+
+<div class="page" id="pdf">
+
+<div class="title">FORMATO DE CAPTACIÓN DE VENTA INMUEBLE</div>
+
+<!-- CAPTACION -->
+<div class="section">CAPTACIÓN</div>
+
+<div class="row">
+    <div class="cell">
+        <label>Ciudad</label>
+        <input type="text">
+    </div>
+    <div class="cell">
+        <label>Fecha</label>
+        <input type="date">
+    </div>
+    <div class="cell">
+        <label>Código</label>
+        <input type="text">
+    </div>
+</div>
+
+<div class="row">
+    <div class="cell">
+        <label>Venta</label>
+        <input type="checkbox">
+    </div>
+    <div class="cell">
+        <label>Precio de venta</label>
+        <input type="text" id="precioVenta" oninput="formatearMoneda(this)">
+    </div>
+    <div class="cell">
+        <label>Administración</label>
+        <input type="text" id="administracion" oninput="formatearMoneda(this)">
+    </div>
+</div>
+
+<!-- INFO INMUEBLE -->
+<div class="section">INFORMACIÓN DEL INMUEBLE</div>
+
+<div class="row">
+    <div class="cell">
+        <label>Barrio</label>
+        <input type="text">
+    </div>
+    <div class="cell">
+        <label>Dirección</label>
+        <input type="text">
+    </div>
+    <div class="cell">
+        <label>Área</label>
+        <input type="text">
+    </div>
+</div>
+
+<!-- TIPO -->
+<div class="grid-4">
+<label><input type="checkbox"> Apartamento</label>
+<label><input type="checkbox"> Casa</label>
+<label><input type="checkbox"> Casa Lote</label>
+<label><input type="checkbox"> Lote Urbano</label>
+
+<label><input type="checkbox"> Apartaestudio</label>
+<label><input type="checkbox"> Casa Campestre</label>
+<label><input type="checkbox"> Finca</label>
+<label><input type="checkbox"> Lote Rural</label>
+
+<label><input type="checkbox"> Bodega</label>
+<label><input type="checkbox"> Casa Finca</label>
+<label><input type="checkbox"> Local</label>
+<label><input type="checkbox"> Oficina</label>
+</div>
+
+<!-- SECCIONES -->
+<div class="section">SECCIONES</div>
+
+<div class="grid-4">
+<label><input type="checkbox"> Balcón</label>
+<label><input type="checkbox"> Comedor</label>
+<label><input type="checkbox"> Habitación Servicio</label>
+<label><input type="checkbox"> Sala-Comedor</label>
+<label><input type="checkbox"> Cuarto Lavado</label>
+<label><input type="checkbox"> Sala Estar</label>
+<label><input type="checkbox"> Baño Servicio</label>
+<label><input type="checkbox"> Estudio</label>
+<label><input type="checkbox"> Patio</label>
+<label><input type="checkbox"> Sótano</label>
+<label><input type="checkbox"> Cocina</label>
+<label><input type="checkbox"> Garaje</label>
+<label><input type="checkbox"> Sala</label>
+<label><input type="checkbox"> Terraza</label>
+<div style="margin-top:10px;">
+    <label>Habitaciones</label>
+    <input type="number" id="habitaciones" style="width: 60px;">
+</div>
+<div style="margin-top:10px;">
+    <label>Baños</label>
+    <input type="number" id="banos" style="width: 60px;">
+</div>
+
+</div>
+
+<!-- BENEFICIOS -->
+<div class="section">BENEFICIOS</div>
+
+<div class="grid-3">
+<label><input type="checkbox"> Aire Acondicionado</label>
+<label><input type="checkbox"> Cancha</label>
+<label><input type="checkbox"> Vigilancia</label>
+
+<label><input type="checkbox"> Alarma</label>
+<label><input type="checkbox"> Kiosco</label>
+<label><input type="checkbox"> Zona Labores</label>
+
+<label><input type="checkbox"> Amoblado</label>
+<label><input type="checkbox"> Parque Infantil</label>
+<label><input type="checkbox"> Parqueadero</label>
+
+<label><input type="checkbox"> Ascensor</label>
+<label><input type="checkbox"> Piscina</label>
+<label><input type="checkbox"> Zona Social</label>
+
+<label><input type="checkbox"> BBQ</label>
+<label><input type="checkbox"> Planta Eléctrica</label>
+<label><input type="checkbox"> Zonas Verdes</label>
+</div>
+
+<!-- INFO PROPIETARIO -->
+<div class="section">INFORMACIÓN DEL PROPIETARIO</div>
+
+<div class="row">
+    <div class="cell">
+        <label>Nombre y Apellido</label>
+        <input type="text" id="propietario">
+    </div>
+    <div class="cell">
+        <label>Correo Electronico</label>
+        <input type="text" id="correo">
+    </div>
+    <div class="cell">
+        <label>Telefono de Contacto</label>
+       <input type="text" id="telefono">
+    </div>
+    
+</div>
+<div class="nota">NOTA INSTITUCIONAL</div>
+<div class="intro">
+El propietario autoriza y consigna a Grupo Empresarial Tu Casa Cartagena el inmueble descrito en este documento para que promueva su venta, anunciándolo por los canales con que cuenta la Empresa, atendiendo las veces que sea necesario a los clientes interesados. Al momento de la negociación de compraventa del inmueble con un clinete presentado por Grupo Empresarial Tu Casa Cartagena, el propietario cancelara el 3% para viviendas urbanas, 5% para inmuebles sub-urbanos y/o rurales y seran cancelados de acuerdo al contrato de corretaje que se haya pactado.
+</div>
+<div class="imagenes">
+    <img src="imagenes/firma 360.jpeg" alt="presentacion">
+</div>
+<div class="watermark">
+    <img src="imagenes/logo tu casa cartagena.jpeg">
+</div>
+<button onclick="descargarPDF()">Descargar PDF</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
